@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<!--   EDDY WAS HERE MOFOS!  SHADYYY--> 
+<!-- Eddy Medina 2016 -->
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<script src="//code.angularjs.org/1.4.8/angular.min.js"></script>
+   <link rel="stylesheet" href="/RH/27/movilEddy/css/webapp.css">
+    <script src="js/jayApp.js"></script>
+    <script src="/RH/27/js/promise-tracker.js"></script>
+    <script src="/RH/27/js/angular-busy.js"></script>
+    <script type="text/javascript" src="/RH/js/jquery-1.7.1.min.js"></script>
+
+<!--     <link href="css/ionic.app.css" rel="stylesheet"> -->
+	 <script>  
+function myFunction() {
+    document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+}
+
+	function getURLParameter(name) {
+	return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+	}
+	var empn = getURLParameter('empn');
+</script>
+</head>
+
+<body ng-app="MyApp" ng-controller="detallesConsultor">
+<header><img src="/RH/movil/images/london_consulting_group.png" alt="London Consulting Group"></header>
+	   <section class="inicio" style="padding-bottom: 10px;">
+	      <h1 style="height: 42px;color: #39847c;font-size: 17px;margin-top: 0px;">
+	       <div class="regresar"><a href="/RH/27/movilEddy/listado.htm"><img src="/RH/movil/images/flecha_roja.png"></a></div>
+	       Detalles Consultor
+	       <div class="accion"></div>
+	      </h1>
+	      <article>
+
+</section>
+
+<!-- <section class="inicio">
+  
+<h1>Detalles Consultor</h1>
+ <article> -->
+ 
+  <!--  </article>
+   </section> -->
+
+<div class="col span_1_of_2">
+ <img class ="stylishs desaturate" src="{{empleado.empleado.foto}}" onError="this.src='/RH/27/images/consultor.jpg';"  >
+ </div>
+<div class="col span_1_of_2">  
+  <h3 style="font-size: 14px;">{{empleado.empleado.nombreCompleto}}</h3>
+  <h4 style="font-size: 12px;">{{empleado.empleado.puesto}}</h4>
+
+  </div> 
+  </br></br></br></br></br>
+<div class="container">
+
+
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" href="#collapse1">Contacto</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+		<table style="width:100%" style="padding: 10px;">
+		    <tr>
+		      <td>Mail Alt</td>
+		      <td>{{empleado.empleado.ALTMAIL}}</td>
+		    </tr>
+		    <tr>
+		      <td>IDSkype</td>
+		      <td>{{empleado.empleado.IDskype}}</td>
+		    </tr>
+		     <tr>
+		      <td>Tel(casa)</td>
+		      <td>{{empleado.empleado.telcasa}}</td>
+		    </tr>
+		    <tr>
+		      <td>Tel(cel)</td>
+		      <td>{{empleado.empleado.telcel}}</td>
+		    </tr>
+		    <tr>
+		      <td>Tel(Asig)</td>
+		      <td>{{empleado.empleado.tel1Asignacion}}</td>
+		    </tr>
+		</table>
+		</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+    <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" href="#collapse2">Configuración</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body">
+<table  style="width:100%; padding: 10px;">
+  <tr>
+    <td>Estado Civil</td>
+    <td>{{empleado.empleado.edoCivil}}</td>
+  </tr>
+  <tr>
+    <td>Esquema</td>
+    <td>{{empleado.empleado.esquema}}</td>
+
+  </tr> 
+  <tr>
+    <td>Rotación</td>
+    <td>{{empleadoempleado.rota}}</td>
+
+  </tr>
+  <tr>
+    <td>Fecha Ingreso</td>
+    <td>{{empleado.empleado.INGRESO}}</td>
+  </tr>
+    <tr>
+    <td>Nivel</td>
+    <td>{{empleado.empleado.nivel}}</td>
+  </tr>
+      <tr>
+    <td>Puesto</td>
+    <td>{{empleado.empleado.puesto}}</td>
+  </tr>
+        <tr>
+    <td>TIpo Consultor</td>
+    <td>{{empleado.empleado.tipoConsultor}}</td>
+  </tr>
+        <tr>
+    <td>Nacionalidad</td>
+    <td>{{empleado.empleado.nacionalidad}}</td>
+  </tr>
+         <tr>
+    <td>Ciudad Base</td>
+    <td>{{empleado.empleado.ciudadBase}}</td>
+  </tr>
+</table>
+		</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" href="#collapse3">Migratorios</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+<table  style="width:100%">
+  <tr>
+    <td>Documento</td>
+    <td>{{empleado.config.docVop}}</td>
+
+  </tr>
+  <tr>
+    <td>Nacionalidad</td>
+    <td>{{empleado.config.nacionalidad}}</td>
+
+  </tr> 
+  <tr>
+    <td>Número</td>
+    <td>{{empleado.config.numero}}</td>
+
+  </tr>
+  <tr>
+    <td>Tipo</td>
+    <td>{{empleado.config.tipo}}</td>
+  </tr>
+    <tr>
+    <td>Expiración</td>
+    <td>{{empleado.config.fechaTermino}}</td>
+  </tr>
+      <tr>
+    <td>Renovable</td>
+    <td>{{empleado.config.renovable}}</td>
+  </tr>
+</table>
+		</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+  
+    <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" href="#collapse4">Asignaciones</a>
+        </h4>
+      </div>
+      <div id="collapse4" class="panel-collapse collapse">
+        <div class="panel-body">
+<div class="bootcards-list" ng-repeat="asigna in empleado.asignaciones">
+  <div class="panel panel-default">
+ 
+ <div class="list-group" >
+<table style="width:100%">
+   
+
+   <td>     
+   <h4 class="list-group-item-heading">{{asigna.nombre}}</h4>
+        <p class="list-group-item-text">Fecha Inicio: {{asigna.fechaIni}}</p>
+		<p class="list-group-item-text">Fecha Fin: {{asigna.fechaFin}}</p>
+		<p class="list-group-item-text">Region: {{asigna.claveRegion}}</p>
+		<p class="list-group-item-text">Clave Actividad: {{asigna.claveActividad}}</p>
+		</td>
+<td>   <div class="circle" style="float:right" ng-if="asigna.clavePais != null ">{{asigna.clavePais}}</div></td>
+</table> 
+    </div>
+  </div></br>
+</div>
+
+
+
+		</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+  
+  
+    <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+
+          <a data-toggle="collapse" href="#collapse5">Honorarios</a>
+        </h4>
+      </div>
+      <div id="collapse5" class="panel-collapse collapse">
+        <div class="panel-body">
+		<table style="width:100%" style="padding: 25px;">
+		    <tr>
+		      <td>Honorarios</td>
+		      <td>{{empleado.honorarios.sueldo}}</td>
+		    </tr>
+		    <tr>
+		      <td>Fecha</td>
+		      <td>{{empleado.honorarios.alta}}</td>
+		    </tr>
+		    <tr>
+		      <td>Comentario 1</td>
+		      <td>{{empleado.honorarios.come1}}</td>
+		    </tr>
+		    <tr>
+		      <td>Comentario 2</td>
+		      <td>{{empleado.honorarios.come2}}</td>
+		    </tr>
+		    <tr>
+		      <td>Comentario 3</td>
+		      <td>{{empleado.honorarios.come3}}</td>
+		    </tr>
+		</table>
+		</div>
+        <div class="panel-footer"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+ <footer>
+		   <div class="inicio" id="inicio1">
+		      <a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/inicio.png"><br>Inicio</a>
+		   </div>
+		   <div class="inicio" id="inicio2">
+		      <a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/inicio.png"><br>Inicio</a>
+		   </div>
+</footer>
+</body>
+</html>

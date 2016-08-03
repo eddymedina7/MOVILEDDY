@@ -1,0 +1,72 @@
+	<script>
+	function getURLParameter(name) {
+	return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null;
+	}
+	var empn = getURLParameter('empn');
+
+	</script>
+
+<ion-view title="Detalles Consultor" id="page6"  class=" ">
+    <ion-content padding="true" class="has-header">
+        <ion-list id="detallesConsultor-list5" class=" ">
+            <ion-item class="item-avatar  " id="detallesConsultor-list-item13">
+                <img src="{{emp.foto}}" onError="this.src='/RH/27/images/consultor.jpg';">
+                <h2>{{emp.nombreCompleto}}</h2>
+                <p style="white-space:normal;">{{emp.nivel}</p>
+            </ion-item>
+        </ion-list>
+        <div class="spacer" style="width: 300px; height: 27px;"></div>
+        <div>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+        </div>
+        <ion-list id="detallesConsultor-list6" class=" ">
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item15" >Contacto
+                <i class="icon ion-android-arrow-dropdown"></i>
+
+            </ion-item>
+
+    <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Collapsible panel</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">Panel Body</div>
+        <div class="panel-footer">Panel Footer</div>
+      </div>
+    </div>
+  </div>
+
+
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item16">Configuración
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item17">Migratorios
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item18">Asignaciones
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item19">Honorarios
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item20">Evaluaciones
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+            <ion-item class="item-icon-right  " id="detallesConsultor-list-item21">Hoja de Vida
+                <i class="icon ion-android-arrow-dropdown"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

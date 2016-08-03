@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="/RH/27/movilEddy/css/webapp.css">
+     <link rel="stylesheet" href="/RH/27/css/angular-busy.css">
+    <script src="//code.angularjs.org/1.4.8/angular.min.js"></script>
+    <script src="js/jayApp.js"></script>
+    <script src="/RH/27/js/promise-tracker.js"></script>
+    <script src="/RH/27/js/angular-busy.js"></script>
+    <script type="text/javascript" src="/RH/js/jquery-1.7.1.min.js"></script>
+<!--     <link href="css/ionic.app.css" rel="stylesheet"> -->
+
+<!-- Amigos, esta es mi ultima app, espero que cuando abran este script para modificarle cosas recuerden con gozo y armonia todos aquellos momentos sistematicos... 
+shhaaaadyy
+ -->
+	 <script>
+	 	<!-- menu -->
+
+	jQuery(function($){
+	   $("#inicio1 a").click(
+	      function(){
+	         $("nav").animate({"bottom":"-185px"}, "normal");
+	         $("#inicio1").hide();
+	         $("#inicio2").show();
+	      }
+	   );
+	});
+	jQuery(function($){
+	   $("#inicio2 a").click(
+	      function(){
+	         $("nav").animate({"bottom":"50px"}, "normal");
+	         $("#inicio1").show();
+	         $("#inicio2").hide();
+	      }
+	   );
+	});
+
+</script>
+   <title>London Consulting Group</title>
+</head> 
+<body ng-app="MyApp" ng-controller="listadoCtrl">
+   <header>
+      <img src="/RH/movil/images/london_consulting_group.png" alt="London Consulting Group">
+    </header>
+
+
+	   <section class="inicio" style="padding-bottom: 10px;">
+	      <h1 style="height: 44px;color: #39847c;font-size: 17px;margin-top: 0px;">
+	       <div class="regresar"><a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/flecha_roja.png"></a></div>
+	       Listado
+	       <div class="accion"></div>
+	      </h1>
+	      <article>
+
+</section>
+
+<!-- <div class="eddy">
+   <table width="100%">
+     <td>
+       <div class="regresar"><a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/flecha_roja.png"></a></div>
+    </td>
+     <td style="text-align: center;"> <h4 style="color: #39847c;font-size:15px">Listado Consultores</h4>
+   </td>
+   </table>
+   
+   </div> -->
+<div class="container">
+   <div cg-busy="myPromise">
+      <label>Nombre</label>
+      <input type="text" name="search" placeholder="Buscar" ng-model="filter" style="margin-top: 8px;margin-bottom: 5px"> <br>
+      <label>Puesto</label>
+     <select class="js-example-responsive" style="width: 60%;height:30px" ng-options="puesto.puesto as puesto.nombre for puesto in empleados.puesto" ng-change= "puestoHelper()" ng-model="willSmith">{{puestoFiltro}}</select>
+</br></br>
+<div  ng-repeat="emp in empleados.empleados | filter: {nombreCompleto:filter,puesto:puestoFiltro} | filter: {puesto:puestoFiltro}:true"  ng-click="reload(emp.pincheNumeroDeEmpleado)"  > 
+  <div  class="list-group-item" style="text-align: center;">
+  <div class="section group">
+   <div class="col span_1_of_2">
+        <img class ="stylishs desaturate" src="{{emp.foto}}" onError="this.src='/RH/27/images/consultor.jpg';"  ></div>
+
+       <div class="col span_1_of_2">   
+             <h2  style="font-size:11px;">{{emp.nombreCompleto}}</h2>
+              <h4 style="font-size:11px;float:left;margin-top: 0px">{{emp.nivel}}</h4>
+       </div>
+    </div>
+    </div>
+   </div>
+   </div>
+</div>
+</br></br></br>
+<footer>
+		   <div class="inicio" id="inicio1">
+		      <a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/inicio.png"><br>Inicio</a>
+		   </div>
+		   <div class="inicio" id="inicio2">
+		      <a href="/cgi-bin/RH/movil/menuPrincipal"><img src="/RH/movil/images/inicio.png"><br>Inicio</a>
+		   </div>
+</footer>
+  </body>
+</html>
